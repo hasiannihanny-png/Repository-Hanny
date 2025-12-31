@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Manis - Serenade WO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --soft-pink: #ffcce0;
+            --hot-pink: #ff66b2;
+            --deep-pink: #ff3385;
+            --white-cloud: #fff5f8;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--white-cloud);
+        }
+
+        /* Navbar Konsisten */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.1);
+            border-bottom: 3px solid var(--soft-pink);
+        }
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            color: var(--hot-pink) !important;
+        }
+        .nav-link { font-weight: 600; color: #666 !important; }
+        .nav-link.active { color: var(--hot-pink) !important; }
+
+        /* Banner Mini */
+        .sub-banner {
+            background: linear-gradient(rgba(255, 102, 178, 0.4), rgba(255, 102, 178, 0.4)), 
+                        url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 70px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .sub-banner h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            text-shadow: 2px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Pricing Card Style */
+        .card-paket {
+            border: 2px solid var(--soft-pink);
+            border-radius: 25px;
+            transition: 0.3s;
+            background: white;
+            overflow: hidden;
+            height: 100%;
+        }
+        .card-paket:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 102, 178, 0.2);
+        }
+        .paket-header {
+            background-color: var(--soft-pink);
+            padding: 20px;
+            text-align: center;
+            color: var(--deep-pink);
+        }
+        .paket-header h3 { font-family: 'Pacifico', cursive; }
+        .price { font-size: 1.8rem; font-weight: bold; }
+
+        .list-unstyled li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--soft-pink);
+        }
+        .list-unstyled li i { color: var(--hot-pink); margin-right: 10px; }
+
+        .btn-pilih {
+            background-color: var(--hot-pink);
+            color: white;
+            border-radius: 50px;
+            padding: 10px 25px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-pilih:hover {
+            background-color: var(--deep-pink);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--deep-pink);
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        #clock {
+            font-size: 0.9rem;
+            color: white;
+            background: var(--hot-pink);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Serenade <i class="fas fa-heart"></i></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="BANNERSERENADE.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="PAKETSERENADE.html">Paket Manis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="GALLERYSERENADE.html">Gallery Foto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="KONTAKSERENADE.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sub-banner">
+        <div class="container">
+            <h2>Pilihan Paket Manis</h2>
+            <div id="clock">Memuat waktu...</div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-4">
+                <div class="card card-paket text-center">
+                    <div class="paket-header">
+                        <h3>Cupcake</h3>
+                        <div class="price">Rp 15jt</div>
+                        <small>Intimate Wedding</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled text-start px-3">
+                            <li><i class="fas fa-check-circle"></i> Venue Taman Mini</li>
+                            <li><i class="fas fa-check-circle"></i> Dekorasi Pastel Simple</li>
+                            <li><i class="fas fa-check-circle"></i> Catering 100 Pax</li>
+                            <li><i class="fas fa-check-circle"></i> Dokumentasi 1 Hari</li>
+                        </ul>
+                        <button class="btn btn-pilih mt-3">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-paket text-center" style="border: 3px solid var(--hot-pink);">
+                    <div class="paket-header" style="background-color: var(--hot-pink); color: white;">
+                        <h3>Cotton Candy</h3>
+                        <div class="price">Rp 35jt</div>
+                        <small>Most Favorite</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled text-start px-3">
+                            <li><i class="fas fa-check-circle"></i> Venue Ballroom Hotel</li>
+                            <li><i class="fas fa-check-circle"></i> Dekorasi Bunga Mewah</li>
+                            <li><i class="fas fa-check-circle"></i> Catering 300 Pax</li>
+                            <li><i class="fas fa-check-circle"></i> MUA & Attire Premium</li>
+                            <li><i class="fas fa-check-circle"></i> Photobooth Unlimited</li>
+                        </ul>
+                        <button class="btn btn-pilih mt-3">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-paket text-center">
+                    <div class="paket-header">
+                        <h3>Rose Gold</h3>
+                        <div class="price">Rp 75jt</div>
+                        <small>Luxury Wedding</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled text-start px-3">
+                            <li><i class="fas fa-check-circle"></i> Venue Outdoor Eksklusif</li>
+                            <li><i class="fas fa-check-circle"></i> Full Wedding Organizer</li>
+                            <li><i class="fas fa-check-circle"></i> Catering 500 Pax</li>
+                            <li><i class="fas fa-check-circle"></i> Cinematic Video</li>
+                            <li><i class="fas fa-check-circle"></i> Live Music & Singer</li>
+                        </ul>
+                        <button class="btn btn-pilih mt-3">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 - <strong>Serenade Wedding Organizer</strong></p>
+            <p class="small mb-0">Mahasiswa: <strong>Hanny Hasianni Yosina</strong> | NIM: <strong>251011700129</strong> | Kelas: <strong>01SIFP002</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('id-ID');
+            document.getElementById('clock').innerHTML = `<i class="far fa-clock"></i> ${time} WIB`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

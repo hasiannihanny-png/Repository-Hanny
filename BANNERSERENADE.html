@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenade Wedding Organizer - Sweet Moments</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --soft-pink: #ffcce0;
+            --hot-pink: #ff66b2;
+            --deep-pink: #ff3385;
+            --white-cloud: #fff5f8;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--white-cloud);
+            color: #555;
+        }
+
+        /* Navigasi Cute */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.1);
+            border-bottom: 3px solid var(--soft-pink);
+        }
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            color: var(--hot-pink) !important;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #666 !important;
+            transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--hot-pink) !important;
+            transform: scale(1.1);
+        }
+
+        /* Banner Hero dengan Tema Pink */
+        .hero-section {
+            background: linear-gradient(rgba(255, 204, 224, 0.4), rgba(255, 204, 224, 0.4)), 
+                        url('https://images.unsplash.com/photo-1522673607200-16488352475b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 30px;
+            border: 2px dashed var(--hot-pink);
+            box-shadow: 0 10px 30px rgba(255, 102, 178, 0.2);
+        }
+
+        .hero-content h1 {
+            font-family: 'Pacifico', cursive;
+            color: var(--deep-pink);
+            font-size: 3.5rem;
+            text-shadow: 2px 2px white;
+        }
+
+        /* JS Clock Style Pink */
+        #clock {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--deep-pink);
+            background: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(255, 51, 133, 0.2);
+        }
+
+        .btn-cute {
+            background-color: var(--hot-pink);
+            color: white;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-cute:hover {
+            background-color: var(--deep-pink);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 51, 133, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--deep-pink);
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        .heart-icon {
+            color: var(--hot-pink);
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Serenade <i class="fas fa-heart"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="BANNERSERENADE.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PAKETSERENADE.html">Paket Manis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="GALLERYSERENADE.html">Gallery Foto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="KONTAKSERENADE.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container d-flex justify-content-center">
+            <div class="hero-content col-md-8">
+                <h1>Serenade Wedding</h1>
+                <p class="lead mb-4">Mewujudkan setiap impian cinta menjadi kenyataan yang paling manis.</p>
+                
+                <div id="clock">Memuat Waktu...</div>
+                
+                <div class="mt-4">
+                    <a href="PAKETSERENADE.html" class="btn btn-cute me-2 shadow-sm">Lihat Paket</button>
+                    <a href="KONTAKSERENADE.html" class="btn btn-outline-danger border-2 rounded-pill px-4 shadow-sm">Hubungi Kami</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4" style="font-family: 'Pacifico', cursive; color: var(--hot-pink);">Kenapa Memilih Serenade?</h2>
+            <div class="row">
+                <div class="col-md-4 px-4">
+                    <i class="fas fa-magic fa-3x mb-3" style="color: var(--hot-pink);"></i>
+                    <h4>Sentuhan Ajaib</h4>
+                    <p>Dekorasi penuh bunga dan warna pastel yang memanjakan mata.</p>
+                </div>
+                <div class="col-md-4 px-4">
+                    <i class="fas fa-smile-beam fa-3x mb-3" style="color: var(--hot-pink);"></i>
+                    <h4>Pelayanan Ramah</h4>
+                    <p>Tim kami akan membantu dengan senyuman di setiap langkah Anda.</p>
+                </div>
+                <div class="col-md-4 px-4">
+                    <i class="fas fa-gem fa-3x mb-3" style="color: var(--hot-pink);"></i>
+                    <h4>Kualitas Mewah</h4>
+                    <p>Meskipun tampil cute, kualitas kami tetap berkelas dan profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2 fw-bold">Dibuat dengan <i class="fas fa-heart heart-icon"></i> oleh Serenade Team</p>
+            <hr style="border-color: var(--hot-pink); width: 50%; margin: 20px auto;">
+            <p class="mb-1">&copy; 2025 - <strong>Serenade Wedding Organizer</strong></p>
+            <p class="small mb-0">Mahasiswa: <strong>Hanny Hasianni Yosina</strong> | NIM: <strong>251011700129</strong> | Kelas: <strong>01SIFP002</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            
+            const dayName = days[now.getDay()];
+            const day = now.getDate();
+            const monthName = months[now.getMonth()];
+            const year = now.getFullYear();
+            const time = now.toLocaleTimeString('id-ID');
+
+            const fullString = `<i class="far fa-calendar-alt"></i> ${dayName}, ${day} ${monthName} ${year} | <i class="far fa-clock"></i> ${time}`;
+            document.getElementById('clock').innerHTML = fullString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

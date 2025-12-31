@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Manis - Serenade WO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --soft-pink: #ffcce0;
+            --hot-pink: #ff66b2;
+            --deep-pink: #ff3385;
+            --white-cloud: #fff5f8;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--white-cloud);
+        }
+
+        /* Navbar Konsisten */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.1);
+            border-bottom: 3px solid var(--soft-pink);
+        }
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            color: var(--hot-pink) !important;
+        }
+        .nav-link { font-weight: 600; color: #666 !important; }
+        .nav-link.active { color: var(--hot-pink) !important; }
+
+        /* Banner Mini */
+        .sub-banner {
+            background: linear-gradient(rgba(255, 102, 178, 0.4), rgba(255, 102, 178, 0.4)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .sub-banner h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            text-shadow: 2px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Form Style */
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255, 102, 178, 0.15);
+            border: 2px solid var(--soft-pink);
+        }
+        .form-label {
+            font-weight: 600;
+            color: var(--deep-pink);
+        }
+        .form-control, .form-select {
+            border-radius: 15px;
+            border: 1px solid var(--soft-pink);
+            padding: 12px;
+        }
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 102, 178, 0.25);
+            border-color: var(--hot-pink);
+        }
+
+        .btn-kirim {
+            background-color: var(--hot-pink);
+            color: white;
+            border-radius: 50px;
+            padding: 15px 40px;
+            font-weight: bold;
+            border: none;
+            width: 100%;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+        .btn-kirim:hover {
+            background-color: var(--deep-pink);
+            transform: scale(1.02);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--deep-pink);
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        #clock {
+            font-size: 0.9rem;
+            color: white;
+            background: var(--hot-pink);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Serenade <i class="fas fa-heart"></i></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="BANNERSERENADE.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PAKETSERENADE.html">Paket Manis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="GALLERYSERENADE.html">Gallery Foto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="KONTAKSERENADE.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sub-banner">
+        <div class="container">
+            <h2>Reservasi Kebahagiaan</h2>
+            <div id="clock">Memuat waktu...</div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="form-container">
+                    <h3 class="text-center mb-4" style="font-family: 'Pacifico'; color: var(--hot-pink);">Katakan "I Do" Bersama Kami</h3>
+                    <p class="text-center text-muted mb-4">Isi formulir di bawah ini untuk konsultasi gratis mengenai pernikahan impian Anda.</p>
+                    
+                    <form id="weddingForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nama Calon Pengantin</label>
+                                <input type="text" class="form-control" placeholder="Contoh: Budi & Shinta" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nomor WhatsApp</label>
+                                <input type="tel" class="form-control" placeholder="0812xxxx" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Pilihan Paket</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Pilih paket pernikahan...</option>
+                                <option value="cupcake">Paket Cupcake (Intimate)</option>
+                                <option value="cotton">Paket Cotton Candy (Favorite)</option>
+                                <option value="rose">Paket Rose Gold (Luxury)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Rencana Tanggal Pernikahan</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Pesan Tambahan / Konsep Impian</label>
+                            <textarea class="form-control" rows="4" placeholder="Ceritakan sedikit tentang konsep yang kamu inginkan..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-kirim shadow-sm">
+                            <i class="fas fa-paper-plane me-2"></i> Kirim Permintaan Reservasi
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 - <strong>Serenade Wedding Organizer</strong></p>
+            <p class="small mb-0">Mahasiswa: <strong>Hanny Hasianni Yosina</strong> | NIM: <strong>251011700129</strong> | Kelas: <strong>01SIFP002</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('id-ID');
+            document.getElementById('clock').innerHTML = `<i class="far fa-clock"></i> ${time} WIB`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Alert sederhana saat kirim form
+        document.getElementById('weddingForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan kebahagiaan Anda telah kami terima. Tim Serenade akan segera menghubungi Anda melalui WhatsApp.');
+        }
+    </script>
+</body>
+</html>

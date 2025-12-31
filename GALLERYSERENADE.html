@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Kebahagiaan - Serenade WO</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --soft-pink: #ffcce0;
+            --hot-pink: #ff66b2;
+            --deep-pink: #ff3385;
+            --white-cloud: #fff5f8;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--white-cloud);
+        }
+
+        /* Navbar Konsisten agar Link Berjalan */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.1);
+            border-bottom: 3px solid var(--soft-pink);
+        }
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            color: var(--hot-pink) !important;
+        }
+        .nav-link { font-weight: 600; color: #666 !important; }
+        .nav-link.active { color: var(--hot-pink) !important; }
+
+        /* Banner Mini */
+        .sub-banner {
+            background: linear-gradient(rgba(255, 102, 178, 0.3), rgba(255, 102, 178, 0.3)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .sub-banner h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            text-shadow: 3px 3px rgba(0,0,0,0.2);
+        }
+
+        /* Gallery Styles (Kembali ke Awal) */
+        .gallery-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            box-shadow: 0 5px 15px rgba(255, 102, 178, 0.1);
+            height: 100%;
+        }
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 102, 178, 0.2);
+        }
+        .gallery-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            border-bottom: 4px solid var(--soft-pink);
+        }
+        .badge-category {
+            background-color: var(--soft-pink);
+            color: var(--deep-pink);
+            font-size: 0.8rem;
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--deep-pink);
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        #clock {
+            font-size: 1rem;
+            color: white;
+            background: var(--hot-pink);
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Serenade <i class="fas fa-heart"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="BANNERSERENADE.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PAKETSERENADE.html">Paket Manis</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="GALLERYSERENADE.html">Gallery Foto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="KONTAKSERENADE.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sub-banner">
+        <div class="container">
+            <h2>Our Love Stories</h2>
+            <div id="clock">Memuat waktu...</div>
+        </div>
+    </div>
+
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card gallery-card">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Garden Wedding">
+                    <div class="card-body">
+                        <span class="badge badge-category mb-2">Outdoor Theme</span>
+                        <h5 class="card-title fw-bold">Intimate Garden Party</h5>
+                        <p class="card-text text-muted">Suasana piknik yang manis dan hangat bersama kerabat terdekat di bawah dekorasi alam yang indah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card gallery-card">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Royal Wedding">
+                    <div class="card-body">
+                        <span class="badge badge-category mb-2">Luxury Theme</span>
+                        <h5 class="card-title fw-bold">Royal Pink Blossom</h5>
+                        <p class="card-text text-muted">Pernikahan megah dengan konsep ribuan bunga mawar asli di ballroom bintang lima.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card gallery-card">
+                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Traditional Wedding">
+                    <div class="card-body">
+                        <span class="badge badge-category mb-2">Modern Adat</span>
+                        <h5 class="card-title fw-bold">Modern Pastel Heritage</h5>
+                        <p class="card-text text-muted">Perpaduan adat yang kental namun dibalut dengan sentuhan warna pastel yang modern dan ceria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 - <strong>Serenade Wedding Organizer</strong></p>
+            <p class="small mb-0">Mahasiswa: <strong>Hanny Hasianni Yosina</strong> | NIM: <strong>251011700129</strong> | Kelas: <strong>01SIFP002</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString('id-ID');
+            document.getElementById('clock').innerHTML = `<i class="far fa-clock"></i> ${time} WIB`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
